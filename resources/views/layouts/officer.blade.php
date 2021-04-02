@@ -227,6 +227,11 @@
       demo.initGoogleMaps();
     });
   </script>
+  <script>
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+  </script>
 
     @yield('scripts')
 

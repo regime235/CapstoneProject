@@ -38,6 +38,26 @@
                                     <label>Destination</label>
                                     <input type="text" class="form-control" placeholder="Enter Destination">
                                 </div>
+                                <div class="form-group">
+                                    <label>Tracker ID</label>
+                                    <select class="form-control">
+                                        <option hidden>Select Tracker</option>
+                                        <option>TRACKER101</option>
+                                        <option>TRACKER102</option>
+                                        <option>TRACKER103</option>
+                                        <option>TRACKER104</option>
+                                        <option>TRACKER105</option>
+                                        <option>TRACKER106</option>
+                                        <option>TRACKER107</option>
+                                        <option>TRACKER108</option>
+                                        <option>TRACKER109</option>
+                                        <option>TRACKER110</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Date Entry</label>
+                                    <input type="text" class="form-control" placeholder="Enter Date">
+                                </div>
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </div>
