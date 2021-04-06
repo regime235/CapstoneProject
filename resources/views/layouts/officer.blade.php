@@ -74,7 +74,7 @@
             </a>
           </li>
           <li>
-            <a href="/vehicle-register">
+            <a href="/registration">
               <i class="fab fa-wpforms"></i>
               <p>Vehicle Registration</p>
             </a>

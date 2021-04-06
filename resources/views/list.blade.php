@@ -11,49 +11,61 @@
                 <div class="card-header">
                     <h5 class="card-title">Transaction List</h5>
                 </div>
+
+                @if ($message = Session::get('success'))
+                    <div class="alert alert-sucess">
+                        <p>{{ $message }}</p>
+                    </div>
+                @endif
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-bordered" id="example">
                             <thead class="text-primary">
+                                <th>ID</th>
                                 <th>Driver</th>
                                 <th>Vehicle Type</th>
                                 <th>Vehicle Color</th>
                                 <th>Vehicle Plate Number</th>
                                 <th>Destination</th>
                                 <th>Tracker ID</th>
-                                <th>Date Entered</th>
-                                <th>Date Exit</th>
+                                <th>Date</th>
+                                <th>Time In</th>
+                                <th>Time Out</th>
                                 <th>Map</th>
                             </thead>
                             <tbody>
+                                @foreach ($data as $key => $value)
                                 <tr>
-                                    <td>Juan Dela Cruz</td>
-                                    <td>Delivery</td>
-                                    <td>Red</td>
-                                    <td>abc-123</td>
-                                    <td>Public Safety Department</td>
-                                    <td>TRACKER101</td>
-                                    <td>January 1, 2021</td>
-                                    <td>January 2, 2021</td>
+                                    <td>{{ ++$i }}</td>
+                                    <td>{{ $value->vehicle_driver }}</td>
+                                    <td>{{ $value->vehicle_type }}</td>
+                                    <td>{{ $value->vehicle_color }}</td>
+                                    <td>{{ $value->vehicle_plateNumber }}</td>
+                                    <td>{{ $value->vehicle_destination }}</td>
+                                    <td>{{ $value->tracker_id }}</td>
+                                    <td>{{ $value->vehicle_date }}</td>
+                                    <td></td>
+                                    <td></td>
                                     <td>
                                         <a href="#" class="btn btn-primary">Map</a>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <td>Maria Clara</td>
-                                    <td>Private</td>
-                                    <td>Black</td>
-                                    <td>Ube-231</td>
-                                    <td>Admin Office</td>
-                                    <td>TRACKER102</td>
-                                    <td>January 1, 2021</td>
-                                    <td>January 2, 2021</td>
                                     <td>
-                                        <a href="#" class="btn btn-primary">Map</a>
+                                        <a href="#" class="btn btn-primary">Time-In</a>
+                                    </td>
+                                    <td>
+                                        <a href="#" class="btn btn-danger">Time-Out</a>
+                                    </td>
+                                    <td>
+                                            <a class="btn btn-primary" href="/transaction-edit{{ $value->id }}">EDIT</a>
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
+                        {!! $data->links()  !!}
                     </div>
                 </div>
             </div>

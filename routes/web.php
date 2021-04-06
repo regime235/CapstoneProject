@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,18 +21,27 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Route::get('/vehicle-register', [App\Http\Controllers\Officer\RegistrationController::class, 'registered']);
-
-Route::get('/map', [App\Http\Controllers\Officer\MapController::class, 'maps']);
-
-Route::get('/transaction', [App\Http\Controllers\Officer\ListController::class, 'transactionList']);
-
 Route::group(['middleware' => ['auth', 'admin']], function() {
 
     Route::get('/dashboard', function () {
         return view('admin.dashboard');
     });
+
+    Route::get('/home', function () {
+        return view('admin.home');
+    });
+
+    Route::get('/user', [App\Http\Controllers\Admin\ListController::class, 'userlist']);
 });
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/registration', [App\Http\Controllers\Officer\RegistrationController::class, 'register']);
+
+Route::get('/map', [App\Http\Controllers\Officer\MapController::class, 'maps']);
+
+Route::get('/transaction', [App\Http\Controllers\Officer\ListController::class, 'index'])->name('transaction');
+Route::post('/register-save', [App\Http\Controllers\Officer\ListController::class, 'store']);
+Route::get('/transaction-edit{id}', [App\Http\Controllers\Officer\ListController::class, 'edit'])->name('transaction-edit');
+// Route::get('/transaction-update', [App\Http\Controllers\Officer\ListController::class, 'update'])->name('transaction.update');
 
