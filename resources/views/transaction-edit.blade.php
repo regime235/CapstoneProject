@@ -13,12 +13,12 @@
                     <h5 class="card-title">Edit Transaction List</h5>
                 </div>
                 <div class="card-body">
-                    <form action="/transaction-edit" method="POST">
-                        {{ csrf_field() }}
+                    <form action="/transaction-update/{id}" method="POST">
+                        @csrf
                         {{ method_field('PUT') }}
                         <div class="form-group">
                             <label>Driver</label>
-                            <input type="text" name="vehicle_driver" value="{{ $value->vehicle_driver }}" class="form-control"></input>
+                            <input type="text" name="vehicle_driver" value="{{ $value->vehicle_driver }}" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Vehicle Type</label>
@@ -29,15 +29,15 @@
                         </div>
                         <div class="form-group">
                             <label>Vehicle Color</label>
-                            <input type="text" name="vehicle_color" value="{{ $value->vehicle_color }}" class="form-control"></input>
+                            <input type="text" name="vehicle_color" value="{{ $value->vehicle_color }}" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Vehicle Plate Number</label>
-                            <input type="text" name="vehicle_plateNumber" value="{{ $value->vehicle_plateNumber }}" class="form-control"></input>
+                            <input type="text" name="vehicle_plateNumber" value="{{ $value->vehicle_plateNumber }}" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Vehicle Destination</label>
-                            <input type="text" name="vehicle_destination" value="{{ $value->vehicle_destination }}" class="form-control"></input>
+                            <input type="text" name="vehicle_destination" value="{{ $value->vehicle_destination }}" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Vehicle Plate Number</label>
@@ -54,8 +54,9 @@
                         </div>
                         <div class="form-group">
                             <label>Vehicle Date</label>
-                            <input type="text" name="vehicle_destination" value="{{ $value->vehicle_date }}" class="form-control"></input>
+                            <input type="text" name="vehicle_destination" value="{{ $value->vehicle_date }}" class="form-control">
                         </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                     </div>
                 </div>

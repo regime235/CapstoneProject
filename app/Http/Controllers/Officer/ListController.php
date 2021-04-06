@@ -37,7 +37,7 @@ class ListController extends Controller
 
     public function edit(Vehicle $vehicle) {
 
-        return view('transaction-edit')->with(['vehicle', $vehicle]);
+        return view('transaction-edit', compact('vehicle'));
     }
 
     public function update(Request $request, Vehicle $vehicle) {
@@ -60,7 +60,7 @@ class ListController extends Controller
     public function destroy(Vehicle $vehicle) {
         $vehicle->delete();
 
-        return redirect()->route('list.destroy')
+        return redirect()->route('transaction')
             ->with('success', 'Vehicle Deleted Successfully');
     }
 }

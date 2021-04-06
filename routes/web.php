@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\ListController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +44,7 @@ Route::get('/map', [App\Http\Controllers\Officer\MapController::class, 'maps']);
 
 Route::get('/transaction', [App\Http\Controllers\Officer\ListController::class, 'index'])->name('transaction');
 Route::post('/register-save', [App\Http\Controllers\Officer\ListController::class, 'store']);
-Route::get('/transaction-edit{id}', [App\Http\Controllers\Officer\ListController::class, 'edit'])->name('transaction-edit');
-// Route::get('/transaction-update', [App\Http\Controllers\Officer\ListController::class, 'update'])->name('transaction.update');
+Route::get('/transaction-edit/{id}', [App\Http\Controllers\Officer\ListController::class, 'edit'])->name('transaction-edit');
+Route::put('/transaction-update/{id}', [App\Http\Controllers\Officer\ListController::class, 'update'])->name('transaction.update');
+Route::delete('/transaction-delete/{id}', [App\Http\Controllers\Officer\ListController::class, 'destroy']);
 

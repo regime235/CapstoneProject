@@ -50,16 +50,13 @@
                                         <a href="#" class="btn btn-primary">Map</a>
                                     </td>
                                     <td>
-                                        <a href="#" class="btn btn-primary">Time-In</a>
-                                    </td>
-                                    <td>
                                         <a href="#" class="btn btn-danger">Time-Out</a>
                                     </td>
                                     <td>
                                             <a class="btn btn-primary" href="/transaction-edit{{ $value->id }}">EDIT</a>
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                            <a href="/transaction-delete/{id}" class="btn btn-danger">DELETE</a>
                                     </td>
                                 </tr>
                                 @endforeach
