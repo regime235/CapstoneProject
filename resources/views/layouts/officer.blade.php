@@ -68,6 +68,12 @@
             </a>
           </li>
           <li>
+            <a href="/maps">
+              <i class="fas fa-globe-asia"></i>
+              <p>Map</p>
+            </a>
+          </li>
+          <li>
             <a href="./report.html">
               <i class="fas fa-file-alt"></i>
               <p>Report</p>

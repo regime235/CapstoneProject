@@ -10,6 +10,7 @@
             <div class="card">
                 <div class="card-header">
                     <h5 class="card-title">Transaction List</h5>
+                    <a class="btn btn-primary" href="/registration">Vehicle Register</a>
                 </div>
 
                 @if ($message = Session::get('success'))
@@ -29,9 +30,6 @@
                                 <th>Destination</th>
                                 <th>Tracker ID</th>
                                 <th>Date</th>
-                                <th>Time In</th>
-                                <th>Time Out</th>
-                                <th>Map</th>
                             </thead>
                             <tbody>
                                 @foreach ($data as $key => $value)
@@ -44,20 +42,6 @@
                                     <td>{{ $value->vehicle_destination }}</td>
                                     <td>{{ $value->tracker_id }}</td>
                                     <td>{{ $value->vehicle_date }}</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary">Map</a>
-                                    </td>
-                                    <td>
-                                        <a href="#" class="btn btn-danger">Time-Out</a>
-                                    </td>
-                                    <td>
-                                            <a class="btn btn-primary" href="/transaction-edit{{ $value->id }}">EDIT</a>
-                                            @csrf
-                                            @method('DELETE')
-                                            <a href="/transaction-delete/{id}" class="btn btn-danger">DELETE</a>
-                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>

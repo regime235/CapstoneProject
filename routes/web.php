@@ -42,6 +42,8 @@ Route::get('/registration', [App\Http\Controllers\Officer\RegistrationController
 
 Route::get('/map', [App\Http\Controllers\Officer\MapController::class, 'maps']);
 
+Route::get('/maps', [App\Http\Controllers\Officer\MapsController::class, 'index']);
+
 Route::get('/transaction', [App\Http\Controllers\Officer\ListController::class, 'index'])->name('transaction');
 Route::post('/register-save', [App\Http\Controllers\Officer\ListController::class, 'store']);
 Route::get('/transaction-edit/{id}', [App\Http\Controllers\Officer\ListController::class, 'edit'])->name('transaction-edit');
