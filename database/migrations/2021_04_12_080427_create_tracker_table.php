@@ -14,7 +14,6 @@ class CreateTrackerTable extends Migration
     public function up()
     {
         Schema::create('trackers', function (Blueprint $table) {
-            $table->bigIncrements('id');
             $table->string('tracker_id');
             $table->integer('trackerNumber');
             $table->double('latitude')->nullable();

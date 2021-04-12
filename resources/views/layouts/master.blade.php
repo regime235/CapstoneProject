@@ -56,12 +56,6 @@
             </a>
           </li>
           <li>
-            <a href="./icons.html">
-              <i class="now-ui-icons ui-1_email-85"></i>
-              <p>Logs</p>
-            </a>
-          </li>
-          <li>
             <a href="./map.html">
               <i class="now-ui-icons files_paper"></i>
               <p>Reports</p>
