@@ -62,7 +62,7 @@
             </a>
           </li>
           <li>
-            <a href="./tracker.html">
+            <a href="/tracker">
               <i class="fas fa-satellite-dish"></i>
               <p>Tracker</p>
             </a>
