@@ -74,7 +74,7 @@
             </a>
           </li>
           <li>
-            <a href="./report.html">
+            <a href="/report">
               <i class="fas fa-file-alt"></i>
               <p>Report</p>
             </a>
