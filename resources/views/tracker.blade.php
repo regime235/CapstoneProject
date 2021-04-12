@@ -17,7 +17,6 @@
                                 <th>Tracking Device ID</th>
                                 <th>Status</th>
                                 <th>Map</th>
-                                <th>ACTIONS</th>
                             </thead>
                             
                         </table>

@@ -25,8 +25,8 @@
                                 <th>Time-In</th>
                                 <th>Time-Out</th>
                                 <th>Duration</th>
+                                <th>Officer</th>
                                 <th>Map</th>
-                                <th>ACTIONS</th>
                             </thead>
                             
                         </table>

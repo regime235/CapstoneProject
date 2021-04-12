@@ -30,6 +30,8 @@
                                 <th>Destination</th>
                                 <th>Tracker ID</th>
                                 <th>Date</th>
+                                <th>Map</th>
+                                <th>Action</th>
                             </thead>
                             <tbody>
                                 @foreach ($data as $key => $value)
@@ -42,6 +44,13 @@
                                     <td>{{ $value->vehicle_destination }}</td>
                                     <td>{{ $value->tracker_id }}</td>
                                     <td>{{ $value->vehicle_date }}</td>
+                                    <td>
+                                        <a class="btn btn-primary" href="#">MAP</a>
+                                    </td>
+                                    <td>
+                                        <a class="btn btn-primary" href="#">EDIT</a>
+                                        <a class="btn btn-danger" href="#">DELETE</a>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
