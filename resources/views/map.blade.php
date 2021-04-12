@@ -74,4 +74,9 @@
             </div>
         </div>
     </div>
+    <div>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCF0D0_-2eKatwlYKR5SO9VI4edyIRMfnw&callback=initMap">
+    </script>
+    </div>
 @endsection

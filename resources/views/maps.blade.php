@@ -9,7 +9,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="title">Map</h5>
+                    <h5 class="title">Map</h5>  
                 </div>
             </div>
         </div>
