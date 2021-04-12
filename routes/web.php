@@ -29,9 +29,7 @@ Route::group(['middleware' => ['auth', 'admin']], function() {
         return view('admin.dashboard');
     });
 
-    Route::get('/home', function () {
-        return view('admin.home');
-    });
+    Route::get('/homepage', [App\Http\Controllers\Admin\HomeController::class, 'home'])->name('admin.home');
 
     Route::get('/user', [App\Http\Controllers\Admin\ListController::class, 'userlist']);
 });

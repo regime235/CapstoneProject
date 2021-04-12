@@ -40,10 +40,10 @@
   <div class="wrapper ">
     <div class="sidebar" data-color="orange"> <!--Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"-->
       <div class="logo">
-        <a href="/home" class="simple-text logo-mini">
+        <a href="/homepage" class="simple-text logo-mini">
           AUP
         </a>
-        <a href="/home" class="simple-text logo-normal">
+        <a href="/homepage" class="simple-text logo-normal">
           Tracking System
         </a>
       </div>
