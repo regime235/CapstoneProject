@@ -54,16 +54,16 @@
                                     <label>Tracker ID</label>
                                     <select class="form-control" name="tracker_id">
                                         <option hidden>Select Tracker</option>
-                                        <option>TRACKER101</option>
-                                        <option>TRACKER102</option>
-                                        <option>TRACKER103</option>
-                                        <option>TRACKER104</option>
-                                        <option>TRACKER105</option>
-                                        <option>TRACKER106</option>
-                                        <option>TRACKER107</option>
-                                        <option>TRACKER108</option>
-                                        <option>TRACKER109</option>
-                                        <option>TRACKER110</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>0</option>
                                     </select>
                                 </div>
                                 <div class="form-group">

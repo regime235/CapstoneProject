@@ -18,8 +18,19 @@
                                 <th>Status</th>
                                 <th>Map</th>
                             </thead>
-                            
+                            <tbody>
+                            @foreach ($data as $key => $value)
+                                <tr>
+                                    <td>{{ $value->trackerNumber }}</td>
+                                    <td></td>
+                                    <td>
+                                        <a class="btn btn-primary" href="#">MAP</a>
+                                    </td>
+                                </tr>
+                            @endforeach
+                            </tbody>
                         </table>
+                        {!! $data->links()  !!}
                     </div>
                 </div>
             </div>
