@@ -32,6 +32,8 @@ Route::group(['middleware' => ['auth', 'admin']], function() {
     Route::get('/homepage', [App\Http\Controllers\Admin\HomeController::class, 'home'])->name('admin.home');
 
     Route::get('/user', [App\Http\Controllers\Admin\ListController::class, 'userlist']);
+
+    Route::get('/adminreport', [App\Http\Controllers\Admin\AdminreportController::class, 'adminreport']);
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

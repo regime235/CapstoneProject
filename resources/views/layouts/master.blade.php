@@ -56,7 +56,7 @@
             </a>
           </li>
           <li>
-            <a href="./map.html">
+            <a href="/adminreport">
               <i class="now-ui-icons files_paper"></i>
               <p>Reports</p>
             </a>
