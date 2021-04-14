@@ -29,12 +29,6 @@
                         <td>{{ $row->phone }}</td>
                         <td>{{ $row->usertype }}</td>
                         <td>{{ $row->email }}</td>
-                        <td>
-                            <a href="#" class="btn btn-success">EDIT</a>
-                        </td>
-                        <td>
-                            <a href="#" class="btn btn-danger">DELETE</a>
-                        </td>
                       </tr>
                       @endforeach
                     </tbody>
