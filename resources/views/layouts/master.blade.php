@@ -38,7 +38,7 @@
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="orange"> <!--Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"-->
+    <div class="sidebar" data-color="gray"> <!--Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"-->
       <div class="logo">
         <a href="/homepage" class="simple-text logo-mini">
           AUP

@@ -6,9 +6,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 
-class report extends Model
+class Report extends Model
 {
-    use HasFactory;
+
+    protected $report = 'vehicles';
+    /* use HasFactory;
 
     protected $fillable = [
         'log_id',
@@ -19,5 +21,5 @@ class report extends Model
         'tracker_id',
         'created_at',
         'updated_at'
-    ];
+    ]; */
 }

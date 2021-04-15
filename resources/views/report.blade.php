@@ -8,8 +8,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-category">Vehicle List</h5>
-                    <h4 class="card-title">Registered Vehicles</h4>
+                    <h4 class="card-title">Report</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -28,8 +27,29 @@
                                 <th>Officer</th>
                                 <th>Map</th>
                             </thead>
-                            
+                            <tbody>
+                                @foreach ($data as $key => $value)
+                                <tr>
+                                    <!-- <td>{{ ++$i }}</td> -->
+                                    <td>{{ $value->vehicle_driver }}</td>
+                                    <td>{{ $value->vehicle_type }}</td>
+                                    <td>{{ $value->vehicle_color }}</td>
+                                    <td>{{ $value->vehicle_plateNumber }}</td>
+                                    <td>{{ $value->vehicle_destination }}</td>
+                                    <td>{{ $value->tracker_id }}</td>
+                                    <td>{{ $value->vehicle_date }}</td>
+                                    <td>{{ $value->created_at }}</td>
+                                    <td>{{ $value->update_at }}</td>
+                                    <td>{{ $value->log_id }}</td>
+                                    <td>{{ $value->user_id }}</td>
+                                    <td>
+                                        <a class="btn btn-primary" href="#">MAP</a>
+                                    </td>
+                                </tr>
+                                @endforeach
+                            </tbody>
                         </table>
+                        {!! $data->links()  !!}
                     </div>
                 </div>
             </div>
