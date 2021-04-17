@@ -39,8 +39,8 @@
                                     <td>{{ $value->tracker_id }}</td>
                                     <td>{{ $value->vehicle_date }}</td>
                                     <td>{{ $value->created_at }}</td>
-                                    <td>{{ $value->update_at }}</td>
-                                    <td>{{ $value->log_id }}</td>
+                                    <td>{{ $value->updated_at }}</td>
+                                    <td>{{ $value->duration }}</td>
                                     <td>{{ $value->user_id }}</td>
                                     <td>
                                         <a class="btn btn-primary" href="#">MAP</a>

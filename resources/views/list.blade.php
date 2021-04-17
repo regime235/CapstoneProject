@@ -24,9 +24,9 @@
                             <thead class="text-primary">
                                 <th>ID</th>
                                 <th>Driver</th>
-                                <th>Vehicle Type</th>
-                                <th>Vehicle Color</th>
-                                <th>Vehicle Plate Number</th>
+                                <th>Type</th>
+                                <th>Color</th>
+                                <th>Plate Number</th>
                                 <th>Destination</th>
                                 <th>Tracker ID</th>
                                 <th>Date</th>
