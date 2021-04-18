@@ -23,6 +23,7 @@ class CreateVehicleTable extends Migration
             $table->string('tracker_id');
             $table->string('vehicle_date');
             $table->timestamps();
+            $table->time('duration');
         });
     }
 
