@@ -34,22 +34,26 @@
                                 <th>Action</th>
                             </thead>
                             <tbody>
-                                @foreach ($data as $key => $value)
+                                @foreach ($data as $key => $vehicle)
                                 <tr>
                                     <td>{{ ++$i }}</td>
-                                    <td>{{ $value->vehicle_driver }}</td>
-                                    <td>{{ $value->vehicle_type }}</td>
-                                    <td>{{ $value->vehicle_color }}</td>
-                                    <td>{{ $value->vehicle_plateNumber }}</td>
-                                    <td>{{ $value->vehicle_destination }}</td>
-                                    <td>{{ $value->tracker_id }}</td>
-                                    <td>{{ $value->vehicle_date }}</td>
+                                    <td>{{ $vehicle->vehicle_driver }}</td>
+                                    <td>{{ $vehicle->vehicle_type }}</td>
+                                    <td>{{ $vehicle->vehicle_color }}</td>
+                                    <td>{{ $vehicle->vehicle_plateNumber }}</td>
+                                    <td>{{ $vehicle->vehicle_destination }}</td>
+                                    <td>{{ $vehicle->trackerNumber }}</td>
+                                    <td>{{ $vehicle->vehicle_date }}</td>
                                     <td>
                                         <a class="btn btn-primary" href="#">MAP</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-primary" href="#">EDIT</a>
-                                        <a class="btn btn-danger" href="#">DELETE</a>
+                                        <a class="btn btn-primary" href="/transaction-edit/{id}">EDIT</a>
+
+                                        @csrf
+                                        @method('DELETE')
+
+                                        <button type="submit" class="btn btn-danger">DELETE</button>
                                     </td>
                                 </tr>
                                 @endforeach

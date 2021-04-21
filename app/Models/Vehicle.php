@@ -16,7 +16,8 @@ class Vehicle extends Model
         'vehicle_color',
         'vehicle_plateNumber',
         'vehicle_destination',
-        'tracker_id',
-        'vehicle_date'
+        'trackerNumber',
+        'vehicle_date',
+
     ];
 }
