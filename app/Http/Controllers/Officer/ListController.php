@@ -10,10 +10,10 @@ class ListController extends Controller
 {
 
     public function index() {
-        $data = Vehicle::latest()->paginate(10);
+        $data = Vehicle::latest()->paginate(5);
 
         return view('list', compact('data'))
-            ->with('i', (request()->input('page', 1) - 1) * 10);
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
 
