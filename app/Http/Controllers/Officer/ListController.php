@@ -24,8 +24,9 @@ class ListController extends Controller
             'vehicle_color' => 'required',
             'vehicle_plateNumber' => 'required',
             'vehicle_destination' => 'required',
-            'tracker_id' => 'required',
-            'vehicle_date' => 'required'
+            'trackerNumber' => 'required',
+            'vehicle_date' => 'required',
+
         ]);
 
         Vehicle::create($request->all());
@@ -47,14 +48,15 @@ class ListController extends Controller
             'vehicle_color' => 'required',
             'vehicle_plateNumber' => 'required',
             'vehicle_destination' => 'required',
-            'tracker_id' => 'required',
-            'vehicle_date' => 'required'
+            'trackerNumber' => 'required',
+            'vehicle_date' => 'required',
+
         ]);
 
         $vehicle->update($request->all());
 
-        return redirect()->route('list.update')
-            ->with('success', 'Vehicle Updated Successfully');
+        return redirect()->route('transaction')
+                ->with('success', 'Vehicle Updated Successfully');
     }
 
     public function destroy(Vehicle $vehicle) {

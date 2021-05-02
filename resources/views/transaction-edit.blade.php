@@ -15,10 +15,10 @@
                 <div class="card-body">
                     <form action="/transaction-update/{id}" method="POST">
                         @csrf
-                        {{ method_field('PUT') }}
+                        @method('PUT')
                         <div class="form-group">
                             <label>Driver</label>
-                            <input type="text" name="vehicle_driver" value="{{ $value->vehicle_driver }}" class="form-control">
+                            <input type="text" name="vehicle_driver" value="{{ $vehicle->vehicle_driver }}" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Vehicle Type</label>
@@ -29,32 +29,35 @@
                         </div>
                         <div class="form-group">
                             <label>Vehicle Color</label>
-                            <input type="text" name="vehicle_color" value="{{ $value->vehicle_color }}" class="form-control">
+                            <input type="text" name="vehicle_color" value="{{ $vehicle->vehicle_color }}" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Vehicle Plate Number</label>
-                            <input type="text" name="vehicle_plateNumber" value="{{ $value->vehicle_plateNumber }}" class="form-control">
+                            <input type="text" name="vehicle_plateNumber" value="{{ $vehicle->vehicle_plateNumber }}" class="form-control">
                         </div>
                         <div class="form-group">
                             <label>Vehicle Destination</label>
-                            <input type="text" name="vehicle_destination" value="{{ $value->vehicle_destination }}" class="form-control">
+                            <input type="text" name="vehicle_destination" value="{{ $vehicle->vehicle_destination }}" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>Vehicle Plate Number</label>
-                            <option value="tracker1">TRACKER101</option>
-                            <option value="tracker2">TRACKER102</option>
-                            <option value="tracker3">TRACKER103</option>
-                            <option value="tracker4">TRACKER104</option>
-                            <option value="tracker5">TRACKER105</option>
-                            <option value="tracker6">TRACKER106</option>
-                            <option value="tracker7">TRACKER107</option>
-                            <option value="tracker8">TRACKER108</option>
-                            <option value="tracker9">TRACKER109</option>
-                            <option value="tracker10">TRACKER110</option>
+                            <label>Tracker Number</label>
+                            <select class="form-control" name="tracker_id">
+                            <option hidden>Select Tracker</option>
+                            <option>TRACKER1</option>
+                            <option>TRACKER2</option>
+                            <option>TRACKER3</option>
+                            <option>TRACKER4</option>
+                            <option>TRACKER5</option>
+                            <option>TRACKER6</option>
+                            <option>TRACKER7</option>
+                            <option>TRACKER8</option>
+                            <option>TRACKER9</option>
+                            <option>TRACKER10</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label>Vehicle Date</label>
-                            <input type="text" name="vehicle_destination" value="{{ $value->vehicle_date }}" class="form-control">
+                            <input type="text" name="vehicle_destination" value="{{ $vehicle->vehicle_date }}" class="form-control">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
