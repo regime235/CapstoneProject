@@ -24,7 +24,7 @@ class ListController extends Controller
             'vehicle_color' => 'required',
             'vehicle_plateNumber' => 'required',
             'vehicle_destination' => 'required',
-            'trackerNumber' => 'required',
+            'tracker_id' => 'required',
             'vehicle_date' => 'required',
 
         ]);
@@ -48,14 +48,14 @@ class ListController extends Controller
             'vehicle_color' => 'required',
             'vehicle_plateNumber' => 'required',
             'vehicle_destination' => 'required',
-            'trackerNumber' => 'required',
+            'tracker_id' => 'required',
             'vehicle_date' => 'required',
 
         ]);
 
         $vehicle->update($request->all());
 
-        return redirect()->route('transaction')
+        return redirect()->route('list.update')
                 ->with('success', 'Vehicle Updated Successfully');
     }
 

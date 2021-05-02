@@ -20,7 +20,7 @@ class CreateLogTable extends Migration
             $table->time('time_out')->nullable();
             $table->time('duration');
             $table->string('name');
-            $table->string('tracker_id');
+            $table->bigIncrements('tracker_id');
             $table->timestamps();
 
         });

@@ -42,7 +42,7 @@
                                     <td>{{ $vehicle->vehicle_color }}</td>
                                     <td>{{ $vehicle->vehicle_plateNumber }}</td>
                                     <td>{{ $vehicle->vehicle_destination }}</td>
-                                    <td>{{ $vehicle->trackerNumber }}</td>
+                                    <td>{{ $vehicle->tracker_id }}</td>
                                     <td>{{ $vehicle->vehicle_date }}</td>
                                     <td>
                                         <a class="btn btn-primary" href="#">MAP</a>
