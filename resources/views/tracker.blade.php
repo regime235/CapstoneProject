@@ -15,16 +15,18 @@
                         <table class="table">
                             <thead class="table">
                                 <th>Tracking Device ID</th>
-                                <!-- <th>Status</th> -->
+                                <th>Mobile Number</th>
                                 <th>Map</th>
                             </thead>
                             <tbody>
                             @foreach ($data as $key => $value)
                                 <tr>
                                     <td>{{ $value->trackerNumber }}</td>
+                                    <td>{{ $value->mobileNumber }}</td>
+                                    
                                     <!-- <td></td> -->
                                     <td>
-                                        <a class="btn btn-primary" href="#">MAP</a>
+                                        <a class="btn btn-primary" href={{ $value->map }}>MAP</a>
                                     </td>
                                 </tr>
                             @endforeach
