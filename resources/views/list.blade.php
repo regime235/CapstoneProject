@@ -48,12 +48,14 @@
                                         <a class="btn btn-primary" href="#">MAP</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-primary" href="/transaction-edit/{id}">EDIT</a>
+                                        <a class="btn btn-primary" href="/{vehicle}/transaction-edit">EDIT</a>
 
-                                        @csrf
-                                        @method('DELETE')
+                                        <form action="/{{ $vehicle->id }}">
+                                            @csrf
+                                            @method('DELETE')
 
-                                        <button type="submit" class="btn btn-danger">DELETE</button>
+                                            <button type="submit" class="btn btn-danger">DELETE</button>
+                                        </form>
                                     </td>
                                 </tr>
                                 @endforeach

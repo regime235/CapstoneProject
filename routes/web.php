@@ -50,7 +50,7 @@ Route::get('/tracker', [App\Http\Controllers\Officer\TrackerController::class, '
 
 Route::get('/transaction', [App\Http\Controllers\Officer\ListController::class, 'index'])->name('transaction');
 Route::post('/register-save', [App\Http\Controllers\Officer\ListController::class, 'store']);
-Route::get('/transaction-edit/{id}', [App\Http\Controllers\Officer\ListController::class, 'edit'])->name('transaction-edit');
-Route::put('/transaction-update/{id}', [App\Http\Controllers\Officer\ListController::class, 'update'])->name('transaction.update');
-Route::delete('/transaction-delete/{id}', [App\Http\Controllers\Officer\ListController::class, 'destroy']);
+Route::get('/{vehicle}/transaction-edit', [App\Http\Controllers\Officer\ListController::class, 'edit'])->name('transaction-edit');
+Route::put('/{vehicle}/transaction-edit', [App\Http\Controllers\Officer\ListController::class, 'update'])->name('transaction.update');
+Route::delete('/{vehicle}', [App\Http\Controllers\Officer\ListController::class, 'destroy']);
 
