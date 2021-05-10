@@ -26,7 +26,7 @@
                                     
                                     <!-- <td></td> -->
                                     <td>
-                                        <a class="btn btn-primary" href={{ $value->map }}>MAP</a>
+                                        <a class="btn btn-primary" target="_blank" href={{ $value->map }}>MAP</a>
                                     </td>
                                 </tr>
                             @endforeach

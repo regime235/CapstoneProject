@@ -12,6 +12,7 @@ class tracker extends Model
 
     protected $fillable = [
         'trackerNumber',
+        'mobileNumber',
         'latitude',
         'longitude',
         'map',

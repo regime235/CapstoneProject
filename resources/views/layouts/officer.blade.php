@@ -49,12 +49,12 @@
       </div>
       <div class="sidebar-wrapper" id="sidebar-wrapper">
         <ul class="nav">
-          <li>
+          <!-- <li>
             <a href="/map">
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
             </a>
-          </li>
+          </li> -->
           <li>
             <a href="/transaction">
               <i class="fas fa-list "></i>
