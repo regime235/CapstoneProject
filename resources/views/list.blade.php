@@ -50,7 +50,7 @@
                                     <td>
                                         <a class="btn btn-primary" href="/{vehicle}/transaction-edit">EDIT</a>
 
-                                        <form action="/{{ $vehicle->id }}">
+                                        <form action="/list/{{ $vehicle->id }}">
                                             @csrf
                                             @method('DELETE')
 

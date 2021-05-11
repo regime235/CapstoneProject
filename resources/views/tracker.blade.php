@@ -19,20 +19,19 @@
                                 <th>Map</th>
                             </thead>
                             <tbody>
-                            @foreach ($data as $key => $value)
+                            @foreach ($tracker as $key => $value)
                                 <tr>
                                     <td>{{ $value->trackerNumber }}</td>
                                     <td>{{ $value->mobileNumber }}</td>
-                                    
-                                    <!-- <td></td> -->
                                     <td>
                                         <a class="btn btn-primary" target="_blank" href={{ $value->map }}>MAP</a>
+                                        <a class="btn btn-primary" target="_blank" href="/tracker-edit">Update</a>
                                     </td>
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
-                        {!! $data->links()  !!}
+                        {!! $tracker->links()  !!}
                     </div>
                 </div>
             </div>

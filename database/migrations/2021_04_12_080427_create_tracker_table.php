@@ -15,8 +15,8 @@ class CreateTrackerTable extends Migration
     {
         Schema::create('trackers', function (Blueprint $table) {
             $table->bigIncrements('tracker_id');
-            $table->integer('trackerNumber');
-            $table->integer('mobileNumber');
+            $table->string('trackerNumber');
+            $table->bigInteger('mobileNumber');
             $table->double('latitude')->nullable();
             $table->double('longitude')->nullable();
             $table->string('map');

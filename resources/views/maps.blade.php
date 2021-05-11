@@ -13,7 +13,7 @@
                 <div class="card-header">
                     <h5 class="title">Map</h5>
                         <iframe
-                            width="1200"
+                            width="1300"
                             height="600"
                             style="border:0"
                             loading="lazy"
