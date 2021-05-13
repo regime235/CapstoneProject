@@ -10,7 +10,7 @@
             <div class="card">
                 <div class="card-header">
                     <h5 class="card-title">Transaction List</h5>
-                    <a class="btn btn-primary" href="/registration">Vehicle Register</a>
+                    <a class="btn btn-info" href="/registration">Vehicle Register</a>
                 </div>
 
                 @if ($message = Session::get('success'))
@@ -45,10 +45,10 @@
                                     <td>{{ $vehicle->tracker_id }}</td>
                                     <td>{{ $vehicle->vehicle_date }}</td>
                                     <td>
-                                        <a class="btn btn-primary" target="_blank" href="https://tracker-project.000webhostapp.com/">MAP</a>
+                                        <a class="btn btn-info" target="_blank" href="https://tracker-project.000webhostapp.com/">MAP</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-primary" href="/{vehicle}/transaction-edit">EDIT</a>
+                                        <a class="btn btn-warning" href="/{vehicle}/transaction-edit">EDIT</a>
 
                                         <form action="/list/{{ $vehicle->id }}">
                                             @csrf

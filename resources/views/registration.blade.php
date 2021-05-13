@@ -55,7 +55,7 @@
                                     <label>Tracker ID</label>
                                     <select class="form-control" name="tracker_id">
                                         <option hidden>Select Tracker</option>
-                                        <option>001</option>
+                                        <option value="1">Tracker001</option>
                                         <!-- <option>002</option>
                                         <option>003</option> -->
                                     </select>
@@ -64,7 +64,7 @@
                                     <label>Date Entry</label>
                                     <input type="text" name="vehicle_date" class="form-control" placeholder="Enter Date">
                                 </div>
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-info">Submit</button>
                             </div>
                         </div>
                     </form>
