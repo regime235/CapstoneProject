@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <h5 class="title">Vehicle Registration</h5>
@@ -55,9 +55,9 @@
                                     <label>Tracker ID</label>
                                     <select class="form-control" name="tracker_id">
                                         <option hidden>Select Tracker</option>
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
+                                        <option>001</option>
+                                        <!-- <option>002</option>
+                                        <option>003</option> -->
                                     </select>
                                 </div>
                                 <div class="form-group">

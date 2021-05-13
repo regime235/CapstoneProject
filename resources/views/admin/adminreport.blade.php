@@ -44,7 +44,7 @@
                                     <!-- <td>{{ $value->log_id }}</td> -->
                                     <td>{{ $value->user_id }}</td>
                                     <td>
-                                        <a class="btn btn-primary" href="#">MAP</a>
+                                        <a class="btn btn-primary" target="_blank" href="https://tracker-project.000webhostapp.com/">MAP</a>
                                     </td>
                                 </tr>
                                 @endforeach

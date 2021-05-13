@@ -25,7 +25,6 @@
                                     <td>{{ $value->mobileNumber }}</td>
                                     <td>
                                         <a class="btn btn-primary" target="_blank" href={{ $value->map }}>MAP</a>
-                                        <a class="btn btn-primary" target="_blank" href="/tracker-edit">Update</a>
                                     </td>
                                 </tr>
                             @endforeach

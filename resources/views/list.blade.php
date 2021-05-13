@@ -45,7 +45,7 @@
                                     <td>{{ $vehicle->tracker_id }}</td>
                                     <td>{{ $vehicle->vehicle_date }}</td>
                                     <td>
-                                        <a class="btn btn-primary" href="#">MAP</a>
+                                        <a class="btn btn-primary" target="_blank" href="https://tracker-project.000webhostapp.com/">MAP</a>
                                     </td>
                                     <td>
                                         <a class="btn btn-primary" href="/{vehicle}/transaction-edit">EDIT</a>
