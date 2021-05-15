@@ -13,9 +13,9 @@
                     <h5 class="card-title">Edit Transaction List</h5>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="/lists/{{ $vehicle->id }}">
-                        @method('POST')
+                    <form action="/lists-update/{{ $vehicle->id }}" method="POST">
                         @csrf
+                        @method('PUT')
                         <div class="form-group">
                             <label>Driver</label>
                             <input type="text" id="vehicle_driver" name="vehicle_driver" value="{{ $vehicle->vehicle_driver }}" class="form-control">
@@ -51,13 +51,14 @@
                             <input type="text" id="vehicle_date" name="vehicle_destination" value="{{ $vehicle->vehicle_date }}" class="form-control">
                         </div>
                         <button class="btn btn-primary">Submit</button>
-                        <form action="/lists/{{ $vehicle->id }}">
+
+
+                    </form>
+                    <form action="/lists-delete/{{ $vehicle->id }}">
                                 @csrf
-                                @method('DELETE')                   
+                                @method('DELETE')
                                 <button type="submit" class="btn btn-danger">DELETE</button>
-                        </form>                
-                    </form> 
-                               
+                        </form>
                     </div>
                 </div>
             </div>

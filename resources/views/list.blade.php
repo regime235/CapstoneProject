@@ -14,7 +14,7 @@ Vehicle List
                 </div>
 
                 @if ($message = Session::get('success'))
-                    <div class="alert alert-sucess">
+                    <div class="alert alert-success">
                         <p>{{ $message }}</p>
                     </div>
                 @endif

@@ -31,7 +31,7 @@ class ListController extends Controller
 
         Vehicle::create($request->all());
 
-        return redirect()->route('transaction')
+        return redirect()->route('list')
             ->with('success', 'Vehicle Registered Successfully');
     }
 
@@ -42,6 +42,7 @@ class ListController extends Controller
     }
 
     public function update(Request $request, Vehicle $vehicle) {
+
         $request->validate([
             'vehicle_driver' => 'required',
             'vehicle_type' => 'required',
@@ -55,14 +56,14 @@ class ListController extends Controller
 
         $vehicle->update($request->all());
 
-        return redirect()->route('transaction')
+        return redirect()->route('/transaction')
                 ->with('success', 'Vehicle Updated Successfully');
     }
 
     public function destroy(Vehicle $vehicle) {
         $vehicle->delete();
 
-        return redirect('/transaction')
+        return redirect('transaction')
             ->with('success', 'Vehicle Deleted Successfully');
     }
 }
