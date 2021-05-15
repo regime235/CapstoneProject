@@ -1,7 +1,7 @@
 @extends('layouts.officer')
 
 @section('title')
-    Transaction List
+Vehicle List
 @endsection
 
 @section('content')
@@ -9,7 +9,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="card-title">Transaction List</h5>
+                    <h5 class="card-title">Vehicle List</h5>
                     <a class="btn btn-info" href="/registration">Vehicle Register</a>
                 </div>
 
@@ -30,6 +30,8 @@
                                 <th>Destination</th>
                                 <th>Tracker ID</th>
                                 <th>Date</th>
+                                <th>Time-In</th>
+                                <th>Time-Out</th>
                                 <th>Map</th>
                                 <th>Action</th>
                             </thead>
@@ -44,18 +46,13 @@
                                     <td>{{ $vehicle->vehicle_destination }}</td>
                                     <td>{{ $vehicle->tracker_id }}</td>
                                     <td>{{ $vehicle->vehicle_date }}</td>
+                                    <td>{{ $vehicle->created_at }}</td>
+                                    <td>{{ $vehicle->updated_at }}</td>
                                     <td>
                                         <a class="btn btn-info" target="_blank" href="https://tracker-project.000webhostapp.com/">MAP</a>
                                     </td>
                                     <td>
-                                        <a class="btn btn-warning" href="/{vehicle}/transaction-edit">EDIT</a>
-
-                                        <form action="/list/{{ $vehicle->id }}">
-                                            @csrf
-                                            @method('DELETE')
-
-                                            <button type="submit" class="btn btn-danger">DELETE</button>
-                                        </form>
+                                        <a class="btn btn-warning" href="/lists/{{ $vehicle->id }}">EDIT</a>
                                     </td>
                                 </tr>
                                 @endforeach

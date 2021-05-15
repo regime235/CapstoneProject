@@ -54,7 +54,7 @@ class RegistrationController extends Controller
     public function destroy(Vehicle $vehicle) {
         $vehicle->delete();
 
-        return redirect()->route('list.destroy')
+        return redirect()->route('list')
             ->with('success', 'Vehicle Deleted Successfully');
     }
 }

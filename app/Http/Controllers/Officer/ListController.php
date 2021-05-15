@@ -55,14 +55,14 @@ class ListController extends Controller
 
         $vehicle->update($request->all());
 
-        return redirect()->route('list.update')
+        return redirect()->route('transaction')
                 ->with('success', 'Vehicle Updated Successfully');
     }
 
     public function destroy(Vehicle $vehicle) {
         $vehicle->delete();
 
-        return redirect()->route('transaction')
+        return redirect('/transaction')
             ->with('success', 'Vehicle Deleted Successfully');
     }
 }
